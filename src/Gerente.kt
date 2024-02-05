@@ -1,4 +1,4 @@
-class Gerente(override val nombre: String, override var edad:Int, override var salarioBase:Double, override var porcentajeImpuestos:Double, var bonus:Double, var exentoImpuestos: Boolean = false): Empleado(nombre, edad, salarioBase, porcentajeImpuestos) {
+class Gerente(nombre: String, edad:Int, salarioBase:Double, override var porcentajeImpuestos:Double =33.99, var bonus:Double, var exentoImpuestos: Boolean = false): Empleado(nombre, edad, salarioBase, porcentajeImpuestos) {
 
     override fun calcularSalario(): Double {
         if (exentoImpuestos) {
@@ -21,6 +21,6 @@ class Gerente(override val nombre: String, override var edad:Int, override var s
     }
 
     override fun toString(): String {
-        return "Nombre: $nombre, Edad: $edad, Salario: $2d$salarioBase, Bonus: $bonus, Exento: ${exento()}"
+        return "${super.toString()}, Bonus: $bonus, Exento: ${exento()}"
     }
 }

@@ -9,7 +9,7 @@ fun main() {
     Hector.calcularSalario()
     println(Hector.toString())
 
-    val Jose = Gerente("Jose", 41, 2000.00, 0.0, 200.00, true)
+    val Jose = Gerente("Jose", 41, 2000.00, 0.0, 200.00)
     Jose.celebrarCumple()
     Jose.administrar()
     Jose.trabajar()
